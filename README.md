@@ -1,6 +1,8 @@
 # rgb-ui
 
-> RGB inspired react UI library.
+![rgb-ui logo](./images/rgb-ui-logo.svg)
+
+> A React UI library inspired by RGB style flashy lights.
 
 
 ## Install
