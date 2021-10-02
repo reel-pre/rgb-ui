@@ -1,0 +1,166 @@
+.baseButtonRgb{
+    position:relative;
+    cursor: pointer;
+    margin:5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 18px 30px;
+    
+    font-size: 20px;
+    background: #000000;
+    border-radius: 19px;
+    color: #FFFFFF;
+
+    //border properties
+    border-top: 4px solid #FF0000;
+    border-bottom: 4px solid #0057FF;
+    border-right: 4px solid #FF00B8;
+    border-left: 4px solid #FFB800;
+
+    //box Shadows
+    box-shadow: 0px -9px 7px rgba(221, 34, 35, 0.4),-9px 0px 7px rgba(255, 184, 0, 0.4),0px 9px 7px rgba(0, 87, 255, 0.4),9px 0px 7px rgba(255, 0, 184, 0.4);
+    transition: all 0.2s cubic-bezier(1, 0.68, 1,-0.18);
+    animation: button-lighting 2.5s cubic-bezier(1, 0.68, 1,-0.18) 0s infinite alternate-reverse;
+
+    &:hover{
+        padding: 20px 30px;
+    }
+    &:focus{
+    }
+    &__upperSVG{
+        position:  absolute;
+        top:-6px;
+        svg{
+            .line{
+                fill:#0057FF;
+                animation: upperLineSVG 2.5s cubic-bezier(1, 0.68, 1,-0.18) 0s infinite alternate-reverse;
+                }
+            
+        }
+    }
+    &__leftSVG{
+        position:  absolute;
+        top: 13px;
+        left: -3px;
+        svg{
+            rect{
+                fill:#0057FF;
+                animation: leftLineSVG 2.5s cubic-bezier(1, 0.68, 1,-0.18) 0s infinite alternate-reverse;
+            }
+            
+        }
+    }
+    &__rightSVG{
+        position:  absolute;
+        top: 8px;
+        right: -2px;
+        svg{
+            rect{
+                fill:#0057FF;
+                animation: rightLineSVG 2.5s cubic-bezier(1, 0.68, 1,-0.18) 0s infinite alternate-reverse;
+            }
+            
+        }
+    }
+}
+
+
+@keyframes button-lighting {
+    
+    0%{ 
+        border-top: 4px solid #FF0000;
+        border-bottom: 4px solid #0057FF;
+        border-right: 4px solid #FF00B8;
+        border-left: 4px solid #FFB800;
+        box-shadow: 0px -9px 7px rgba(221, 34, 35, 0.4),-9px 0px 7px rgba(255, 184, 0, 0.4),0px 9px 7px rgba(0, 87, 255, 0.4),9px 0px 7px rgba(255, 0, 184, 0.4);
+    }
+    40%{
+        border-bottom: 4px solid #FF0000;
+        border-top: 4px solid #0057FF;
+        border-left: 4px solid #FF00B8;
+        border-right: 4px solid #FFB800;
+        box-shadow: 0px 9px 7px rgba(221, 34, 35, 0.4),9px 0px 7px rgba(255, 184, 0, 0.4),0px -9px 7px rgba(0, 87, 255, 0.4),-9px 0px 7px rgba(255, 0, 184, 0.4);
+
+    }
+    60%{ 
+        border-top: 4px solid #a0a0a0;
+        border-bottom: 4px solid #a0a0a0;
+        border-right: 4px solid #a0a0a0;
+        border-left: 4px solid #a0a0a0;
+    }
+    80%{ 
+        border-top: 4px solid #FF0000;
+        border-bottom: 4px solid #0057FF;
+        border-right: 4px solid #FF00B8;
+        border-left: 4px solid #FFB800;
+        box-shadow: 0px -9px 7px rgba(221, 34, 35, 0.4),-9px 0px 7px rgba(255, 184, 0, 0.4),0px 9px 7px rgba(0, 87, 255, 0.4),9px 0px 7px rgba(255, 0, 184, 0.4);
+    }
+    100%{
+        border-bottom: 4px solid #FF0000;
+        border-top: 4px solid #0057FF;
+        border-left: 4px solid #FF00B8;
+        border-right: 4px solid #FFB800;
+        box-shadow: 0px 9px 7px rgba(221, 34, 35, 0.4),9px 0px 7px rgba(255, 184, 0, 0.4),0px -9px 7px rgba(0, 87, 255, 0.4),-9px 0px 7px rgba(255, 0, 184, 0.4);
+    }
+
+}
+
+
+@keyframes upperLineSVG {
+    0%{ 
+        fill:#FF0000;
+    }
+    40%{
+        fill:#0057FF;
+    }
+    60%{
+        fill:#a0a0a0;
+    }
+    80%{ 
+        fill:#FF0000;
+    }
+    100%{
+        fill:#0057FF;
+    }
+}
+
+
+
+
+@keyframes leftLineSVG {
+    0%{ 
+        fill:#FFB800;
+    }
+    40%{
+        fill:#FF00B8;
+    }
+    60%{
+        fill:#a0a0a0;
+    }
+    80%{ 
+        fill:#FFB800;
+    }
+    100%{
+        fill:#FF00B8;
+    }
+}
+
+@keyframes rightLineSVG {
+    0%{ 
+        fill:#FF00B8;
+    }
+    40%{
+        fill:#FFB800;
+    }
+    60%{
+        fill:#a0a0a0;
+    }
+    80%{ 
+        fill:#FF00B8;
+    }
+    100%{
+        fill:#FFB800;
+    }
+}

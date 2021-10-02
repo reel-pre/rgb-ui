@@ -1,10 +1,16 @@
 import React from 'react'
-
-import { ExampleComponent } from 'rgb-ui'
+import { RGBbutton } from 'rgb-ui'
 import 'rgb-ui/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (<>
+<p className="classifier">{"<RGBbutton label='Click Me'/>"}</p>
+<RGBbutton label="Click Me"/>
+<p className="classifier">{"<RGBbutton label='Click Me' type='scratch'/>"}</p>
+<RGBbutton label="Click Me" type="scratch"/>
+<p className="classifier">{"<RGBbutton label='Click Me' type='lines'/>"}</p>
+<RGBbutton label="Click Me" type="lines"/>
+  </>)
 }
 
 export default App
