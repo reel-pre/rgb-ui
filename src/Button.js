@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './button.module.scss'
 const RGBbutton=(props)=>{
     return (
-    <button className={styles.baseButtonRgb}>
+    <button onClick={props.onClick} className={styles.baseButtonRgb}>
    <div className={styles.baseButtonRgb__upperSVG}>
     <svg className={styles.upperSVG} width="68" height="3" viewBox="0 0 68 3" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect className={styles.line} width="68" height="2" rx="1" fill="#FF1714"/>

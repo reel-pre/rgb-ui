@@ -5,7 +5,7 @@ import 'rgb-ui/dist/index.css'
 const App = () => {
   return (<>
 <p className="classifier">{"<RGBbutton label='Click Me'/>"}</p>
-<RGBbutton label="Click Me"/>
+<RGBbutton label="Click Me" />
 <p className="classifier">{"<RGBbutton label='Click Me' type='scratch'/>"}</p>
 <RGBbutton label="Click Me" type="scratch"/>
 <p className="classifier">{"<RGBbutton label='Click Me' type='lines'/>"}</p>
