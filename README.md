@@ -17,12 +17,11 @@ import React from 'react'
 import { RGBbutton } from 'rgb-ui'
 import 'rgb-ui/dist/index.css'
 
-
-class Example extends Component {
-  render() {
-    return <RGBbutton label="Click Me" type="scratch"/>
-  }
+const App = () => {
+  return <RGBbutton label="Click Me" />
 }
+
+export default App
 ```  
 
 
