@@ -1,4 +1,3 @@
-# rgb-ui
 
 ![rgb-ui logo](./images/rgb-ui-logo.svg)
 
@@ -24,7 +23,16 @@ class Example extends Component {
     return <RGBbutton label="Click Me" type="scratch"/>
   }
 }
-```
+```  
+
+
+Currently there is only support for RGBbutton component and the button component has 3 variants which are shown below:  
+
+
+![rgb-ui logo](./images/buttonAnimations.gif)  
+
+
+You can override the button properties by using the css button element selector for properties such as font and margin.  
 
 ## License
 
