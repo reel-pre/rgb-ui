@@ -1,5 +1,5 @@
 
-![rgb-ui logo](./images/rgb-ui-logo.svg)
+![rgb-ui logo](./images/logo.gif)
 
 > A React UI library inspired by RGB style flashy lights.
 
@@ -28,7 +28,7 @@ export default App
 Currently there is only support for RGBbutton component and the button component has 3 variants which are shown below:  
 
 
-![rgb-ui logo](./images/buttonAnimations.gif)  
+![rgb-ui demo example](./images/example.gif)  
 
 
 You can override the button properties by using the css button element selector for properties such as font and margin.  
