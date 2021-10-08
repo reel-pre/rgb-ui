@@ -31,7 +31,26 @@ Currently there is only support for RGBbutton component and the button component
 ![rgb-ui demo example](./images/example.gif)  
 
 
-You can override the button properties by using the css button element selector for properties such as font and margin.  
+You can include your own css classnames to override the button styles by passing the classname to the RGBbutton component:  
+```jsx
+<RGBbutton label="Click Me" className="customClass"/>  
+```
+
+However for few properties such as font-size, background-color of the button,use either the !important rule for your property:  
+```css
+.customClass{
+font-size:25px !important;
+}
+```  
+
+ Or use classname with high specificity, such as including atleast one selector before your classname.  
+Eg:  
+```css
+div .customClass{
+font-size:25px;
+}
+```  
+
 
 ## License
 

@@ -21,3 +21,7 @@ p{
   padding: 5px;
   border-radius: 5px;
 }
+
+div .customClass{
+  font-size: 50px;
+}
