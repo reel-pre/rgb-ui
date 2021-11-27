@@ -25,3 +25,15 @@ p{
 div .customClass{
   font-size: 50px;
 }
+
+.rangecontainer{
+  display: flex;
+  width: 20%;
+  font-family: 'Passion One', cursive;
+  font-weight: 200;
+  
+}
+
+.extrabottommargin{
+  margin-bottom: 10px;
+}

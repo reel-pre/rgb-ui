@@ -1,0 +1,29 @@
+.RGBchip{
+    display: inline-block;
+    background-color: black;
+    min-width: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 8px;
+    border-radius: 20%;
+    margin: 5px;
+    color: white;
+    cursor:default;
+
+    &--red{
+        box-shadow: 0px 1px 14px #ff000093;
+        border: 3px solid #FF0000;
+    }
+
+    &--green{
+        box-shadow: 0px 1px 14px #00FF0093;
+        border: 3px solid #00FF00;
+    }
+    &--blue{
+        box-shadow: 0px 1px 14px #0000FF93;
+        border: 3px solid #0000FF;
+    }
+}
+
+
