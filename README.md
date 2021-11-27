@@ -13,12 +13,12 @@ npm install --save rgb-ui
 
 ## Components
 ### 1. RGBslider
-A rgb-ui variant of a input range slider.
+A rgb-ui variant of a input range slider.  
 <b>Props</b>: min(number) max(number) step(number) value(number) onChange(function) type(string = 'red'||'green'||'blue').  
 All three variants of the RGBslider(red, green or blue) can be accessed through the type prop.
 
 ### 2. RGBchip
-A rgb-ui variant of a chip to display data.
+A rgb-ui variant of a chip to display data.  
 <b>Props</b>: label(number or string) type(string = 'red'||'green'||'blue').  
 All three variants of the RGBchip(red, green or blue) can be accessed through the type prop.  
 
