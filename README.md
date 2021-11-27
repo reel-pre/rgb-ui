@@ -1,7 +1,7 @@
 
 ![rgb-ui logo](./images/logo.gif)
 
-> A React UI library inspired by RGB style flashy lights.
+> A React UI library inspired by RGB style flashy lights that best suits the dark theme.
 
 
 ## Install
@@ -10,28 +10,66 @@
 npm install --save rgb-ui
 ```
 
-## Usage
 
+## Components
+### 1. RGBslider
+A rgb-ui variant of a input range slider.
+<b>Props</b>: min(number) max(number) step(number) value(number) onChange(function) type(string = 'red'||'green'||'blue').  
+All three variants of the RGBslider(red, green or blue) can be accessed through the type prop.
+
+### 2. RGBchip
+A rgb-ui variant of a chip to display data.
+<b>Props</b>: label(number or string) type(string = 'red'||'green'||'blue').  
+All three variants of the RGBchip(red, green or blue) can be accessed through the type prop.  
+
+Example usage:    
+![rgb-ui_range](./images/range_gif_animation.gif)  
+
+Example code:  
 ```jsx
-import React from 'react'
-import { RGBbutton } from 'rgb-ui'
-import 'rgb-ui/dist/index.css'
+      <div className='rangecontainer'>
+        <RGBslider
+          type='red'
+          min={0}
+          max={40}
+          value={input}
+          onChange={handleRangeChange}
+        />
+        <RGBchip label={input} type='red' />
+      </div>
+      <div className='rangecontainer'>
+        <RGBslider
+          type='green'
+          min={0}
+          max={40}
+          value={input2}
+          onChange={handleRangeChange2}
+        />
+        <RGBchip label={input2} type='green' />
+      </div>
+      <div className='rangecontainer extrabottommargin'>
+        <RGBslider
+          type='blue'
+          min={0}
+          max={40}
+          step={10}
+          value={input3}
+          onChange={handleRangeChange3}
+        />
+        <RGBchip label={input3} type='blue' />
+      </div>
+```
 
-const App = () => {
-  return <RGBbutton label="Click Me" />
-}
 
-export default App
-```  
+### 3. RGBbutton
+<b>Props</b>: label(string | number) type(string = 'scratch'||'lines')(optional)
 
-
-Currently there is only support for RGBbutton component and the button component has 3 variants which are shown below:  
-
-
+Example usage:    
 ![rgb-ui demo example](./images/example.gif)  
 
 
-You can include your own css classnames to override the button styles by passing the classname to the RGBbutton component:  
+You can include your own css classnames to override the styles.  
+For example, you can override the button styles by passing the classname to the RGBbutton component:  
 ```jsx
 <RGBbutton label="Click Me" className="customClass"/>  
 ```
