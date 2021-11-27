@@ -45,6 +45,7 @@ const App = () => {
           type='blue'
           min={0}
           max={40}
+          step={10}
           value={input3}
           onChange={handleRangeChange3}
         />

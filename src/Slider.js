@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './slider.module.scss'
 
-const RGBslider = ({ type, value, onChange, min, max }) => {
+const RGBslider = ({ type, value, onChange, min, max, step }) => {
   const calculateBackground = () => {
     const differencePercent = (value / (max - min)) * 100
     return (
@@ -23,6 +23,7 @@ const RGBslider = ({ type, value, onChange, min, max }) => {
       onChange={onChange}
       min={min}
       max={max}
+      step={step ? step : 1}
       className={`${styles.rgbSlider}  ${
         type === 'red'
           ? styles['rgbSlider--red']
