@@ -52,7 +52,7 @@ const App = () => {
         <RGBchip label={input3} type='blue' />
         <br />
       </div>
-      {/* <RGBbutton label='RGB-UI' type='scratch' className='customClass' />
+      <RGBbutton label='RGB-UI' type='scratch' className='customClass' />
 
       <p className='classifier'>{"<RGBbutton label='Click Me'/>"}</p>
       <RGBbutton label='Click Me' />
@@ -63,7 +63,7 @@ const App = () => {
       <p className='classifier'>
         {"<RGBbutton label='Click Me' type='lines'/>"}
       </p>
-      <RGBbutton label='Click Me' type='lines' /> */}
+      <RGBbutton label='Click Me' type='lines' />
     </>
   )
 }
