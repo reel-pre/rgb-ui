@@ -9,6 +9,10 @@
 ```bash
 npm install --save rgb-ui
 ```
+## Import
+```jsx
+import { RGBbutton, RGBslider, RGBchip } from 'rgb-ui'
+```
 
 
 ## Components
