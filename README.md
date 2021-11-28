@@ -18,12 +18,20 @@ import { RGBbutton, RGBslider, RGBchip } from 'rgb-ui'
 ## Components
 ### 1. RGBslider
 A rgb-ui variant of a input range slider.  
-<b>Props</b>: min(number) max(number) step(number) value(number) onChange(function) type(string = 'red'||'green'||'blue').  
+
+
+<b>Prop-name(type)</b>:
+
+min(number), max(number), step(number), value(number), onChange(function), type(string = 'red'||'green'||'blue'), className(string).  
 All three variants of the RGBslider(red, green or blue) can be accessed through the type prop.
 
 ### 2. RGBchip
 A rgb-ui variant of a chip to display data.  
-<b>Props</b>: label(number or string) type(string = 'red'||'green'||'blue').  
+
+
+<b>Prop-name(type)</b>:
+
+label(number or string), type(string = 'red'||'green'||'blue'), className(string), onClick(function).  
 All three variants of the RGBchip(red, green or blue) can be accessed through the type prop.  
 
 Example usage:    
@@ -66,14 +74,18 @@ Example code:
 
 
 ### 3. RGBbutton
-<b>Props</b>: label(string | number) type(string = 'scratch'||'lines')(optional)
+
+
+<b>Prop-name(type)</b>:
+
+label(string | number), type(string = 'scratch'||'lines'||undefined), className(string).
 
 Example usage:    
 ![rgb-ui demo example](./images/example.gif)  
 
 
 You can include your own css classnames to override the styles.  
-For example, you can override the button styles by passing the classname to the RGBbutton component:  
+For example, you can override the button styles by passing the classname to any component:  
 ```jsx
 <RGBbutton label="Click Me" className="customClass"/>  
 ```
