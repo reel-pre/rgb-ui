@@ -1,24 +1,25 @@
-
 ![rgb-ui logo](./images/logo.gif)
 
 > A React UI library inspired by RGB style flashy lights that best suits the dark theme.
-
 
 ## Install
 
 ```bash
 npm install --save rgb-ui
 ```
+
 ## Import
+
 ```jsx
 import { RGBbutton, RGBslider, RGBchip } from 'rgb-ui'
+import 'rgb-ui/dist/index.css'
 ```
 
-
 ## Components
-### 1. RGBslider
-A rgb-ui variant of a input range slider.  
 
+### 1. RGBslider
+
+A rgb-ui variant of a input range slider.
 
 <b>Prop-name(type)</b>:
 
@@ -26,18 +27,19 @@ min(number), max(number), step(number), value(number), onChange(function), type(
 All three variants of the RGBslider(red, green or blue) can be accessed through the type prop.
 
 ### 2. RGBchip
-A rgb-ui variant of a chip to display data.  
 
+A rgb-ui variant of a chip to display data.
 
 <b>Prop-name(type)</b>:
 
 label(number or string), type(string = 'red'||'green'||'blue'), className(string), onClick(function).  
-All three variants of the RGBchip(red, green or blue) can be accessed through the type prop.  
+All three variants of the RGBchip(red, green or blue) can be accessed through the type prop.
 
-Example usage:    
-![rgb-ui_range](./images/range_gif_animation.gif)  
+Example usage:  
+![rgb-ui_range](./images/range_gif_animation.gif)
 
-Example code:  
+Example code:
+
 ```jsx
       <div className='rangecontainer'>
         <RGBslider
@@ -72,39 +74,38 @@ Example code:
       </div>
 ```
 
-
 ### 3. RGBbutton
-
 
 <b>Prop-name(type)</b>:
 
 label(string | number), type(string = 'scratch'||'lines'||undefined), className(string).
 
-Example usage:    
-![rgb-ui demo example](./images/example.gif)  
-
+Example usage:  
+![rgb-ui demo example](./images/example.gif)
 
 You can include your own css classnames to override the styles.  
-For example, you can override the button styles by passing the classname to any component:  
+For example, you can override the button styles by passing the classname to any component:
+
 ```jsx
-<RGBbutton label="Click Me" className="customClass"/>  
+<RGBbutton label='Click Me' className='customClass' />
 ```
 
-However for few properties such as font-size, background-color of the button,use either the !important rule for your property:  
-```css
-.customClass{
-font-size:25px !important;
-}
-```  
+However for few properties such as font-size, background-color of the button,use either the !important rule for your property:
 
- Or use classname with high specificity, such as including atleast one selector before your classname.  
-Eg:  
 ```css
-div .customClass{
-font-size:25px;
+.customClass {
+  font-size: 25px !important;
 }
-```  
+```
 
+Or use classname with high specificity, such as including atleast one selector before your classname.  
+Eg:
+
+```css
+div .customClass {
+  font-size: 25px;
+}
+```
 
 ## License
 
