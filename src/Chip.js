@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from './chip.module.scss'
 
-const RGBchip = ({ type, label }) => {
+const RGBchip = ({ type, label, onClick, className }) => {
   return (
     <div
-      className={`${styles.RGBchip}  ${
+      onClick={onClick}
+      className={`${styles.RGBchip} ${className} ${
         type === 'red'
           ? styles['RGBchip--red']
           : type === 'blue'
