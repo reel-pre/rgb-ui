@@ -64,7 +64,7 @@ $blue93:rgba(0, 0, 255, 0.93);
             animation: startGlowFillGreen 0.9s ease-in-out 0s;
         }
         &__glowBlue{
-            @include glow($blu9);
+            @include glow($blue);
             animation: startGlowFillBlue 0.9s ease-in-out 0s;
         }
         &__dim{
