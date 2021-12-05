@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
-import { RGBbutton, RGBslider, RGBchip } from 'rgb-ui'
+import { RGBbutton, RGBslider, RGBchip, RGBcheckbox } from 'rgb-ui'
 import 'rgb-ui/dist/index.css'
 
 const App = () => {
   const [input, setInput] = useState(40)
   const [input2, setInput2] = useState(40)
   const [input3, setInput3] = useState(40)
-
+  const [checkbox, setCheckbox] = useState(false)
+  const [checkbox2, setCheckbox2] = useState(false)
+  const [checkbox3, setCheckbox3] = useState(false)
   const handleRangeChange = (e) => {
     setInput(e.target.value)
   }
@@ -50,11 +52,39 @@ const App = () => {
           onChange={handleRangeChange3}
         />
         <RGBchip label={input3} type='blue' />
-        <br />
       </div>
       <RGBbutton label='RGB-UI' type='scratch' className='customClass' />
 
       <p className='classifier'>{"<RGBbutton label='Click Me'/>"}</p>
+      <br />
+      <RGBcheckbox
+        label='red checkbox'
+        type='red'
+        checkstate={checkbox}
+        onClick={() => {
+          setCheckbox((prevState) => !prevState)
+        }}
+      />
+      <br />
+      <RGBcheckbox
+        label='green checkbox'
+        type='green'
+        checkstate={checkbox2}
+        onClick={() => {
+          setCheckbox2((prevState) => !prevState)
+        }}
+      />
+      <br />
+      <RGBcheckbox
+        label='blue checkbox'
+        type='blue'
+        checkstate={checkbox3}
+        onClick={() => {
+          setCheckbox3((prevState) => !prevState)
+        }}
+      />
+      <br />
+      <br />
       <RGBbutton label='Click Me' />
       <p className='classifier'>
         {"<RGBbutton label='Click Me' type='scratch'/>"}

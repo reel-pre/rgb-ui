@@ -6,6 +6,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(49, 49, 49);
   padding: 20px;
+  font-family: 'Passion One', cursive;
+
 }
 
 button{

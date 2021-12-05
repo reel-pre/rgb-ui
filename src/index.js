@@ -3,5 +3,5 @@ import styles from './styles.module.scss'
 import RGBbutton from './Button'
 import RGBslider from './Slider'
 import RGBchip from './Chip'
-
-export { RGBbutton, RGBslider, RGBchip }
+import RGBcheckbox from './Checkbox'
+export { RGBbutton, RGBslider, RGBchip, RGBcheckbox }
