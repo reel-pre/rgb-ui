@@ -63,8 +63,10 @@ A rgb-ui variant of a checkbox input.
 <b>Prop-name(type)</b>:
 
 label(number or string), type(string = 'red'||'green'||'blue'), onClick(function), checkstate(boolean).  
-All three variants of the RGBcheckbox(red, green or blue) can be accessed through the type prop.
-Example usage:
+All three variants of the RGBcheckbox(red, green or blue) can be accessed through the type prop.   
+
+
+Example usage:  
 ![rgb-ui_checkbox](./images/check_gif_animation.gif)
 
 
