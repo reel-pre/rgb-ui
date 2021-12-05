@@ -9,9 +9,9 @@ npm install --save rgb-ui
 ```
 
 ## Import
-
+Components can be imported from rgb-ui using named import. You also need to import the css file for rgb-ui.
 ```jsx
-import { RGBbutton, RGBslider, RGBchip } from 'rgb-ui'
+import { RGBbutton, RGBslider, RGBchip, RGBcheckbox } from 'rgb-ui'
 import 'rgb-ui/dist/index.css'
 ```
 
@@ -32,16 +32,20 @@ A rgb-ui variant of a chip to display data.
 
 <b>Prop-name(type)</b>:
 
-label(number or string), type(string = 'red'||'green'||'blue'), className(string), onClick(function).  
+label(number or string), type(string = 'red'||'green'||'blue'), className(string), onClick(function), value(number).  
 All three variants of the RGBchip(red, green or blue) can be accessed through the type prop.
 
-Example usage:  
+Example usage(RGBslider and RGBchip):  
 ![rgb-ui_range](./images/range_gif_animation.gif)
 
 Example code:
 
 ```jsx
-      <div className='rangecontainer'>
+  const [input, setInput] = useState(40)
+  const handleRangeChange = (e) => {
+    setInput(e.target.value)
+  }
+return <div className='rangecontainer'>
         <RGBslider
           type='red'
           min={0}
@@ -50,31 +54,34 @@ Example code:
           onChange={handleRangeChange}
         />
         <RGBchip label={input} type='red' />
-      </div>
-      <div className='rangecontainer'>
-        <RGBslider
-          type='green'
-          min={0}
-          max={40}
-          value={input2}
-          onChange={handleRangeChange2}
-        />
-        <RGBchip label={input2} type='green' />
-      </div>
-      <div className='rangecontainer extrabottommargin'>
-        <RGBslider
-          type='blue'
-          min={0}
-          max={40}
-          step={10}
-          value={input3}
-          onChange={handleRangeChange3}
-        />
-        <RGBchip label={input3} type='blue' />
-      </div>
+      </div>;
+```
+### 3. RGBcheckbox
+A rgb-ui variant of a checkbox input.
+
+
+<b>Prop-name(type)</b>:
+
+label(number or string), type(string = 'red'||'green'||'blue'), onClick(function), checkstate(boolean).  
+All three variants of the RGBcheckbox(red, green or blue) can be accessed through the type prop.
+Example usage:
+![rgb-ui_checkbox](./images/check_gif_animation.gif)
+
+
+Example code:
+```jsx
+const [checkbox, setCheckbox] = useState(false)
+return <RGBcheckbox
+        label='red checkbox'
+        type='red'
+        checkstate={checkbox}
+        onClick={() => {
+          setCheckbox((prevState) => !prevState)
+        }}
+      />;
 ```
 
-### 3. RGBbutton
+### 4. RGBbutton
 
 <b>Prop-name(type)</b>:
 

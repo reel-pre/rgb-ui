@@ -1,0 +1,138 @@
+$red:#FF0000;
+$red93:rgba(255, 0, 0, 0.93);
+$green:#00FF00;
+$green93:rgba(0, 255, 0, 0.93);
+$blue:#0000FF;
+$blue93:rgba(0, 0, 255, 0.93);
+
+@mixin glow($color){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color:  $color;
+    border-radius: 15%;
+    // animation: startGlowFill 0.7s ease-in-out 0s;
+}
+
+.RGBcheckboxContainer{
+    margin: 5px 0;
+    user-select: none;
+    vertical-align:middle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &__label{
+        margin-left: 10px;
+        color: white;
+    }
+    &__main{
+        width: 25px;
+        height: 25px;
+        background-color: black;
+        border-radius: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &Inactive{
+        border: 1px solid #999999;
+        box-shadow: 0px 0px 6px #999999;
+        }
+        &ActiveRed{
+            border: 1px solid $red;
+            box-shadow: 0px 0px 6px $red93;
+            animation: startGlowBorderRed 0.8s ease-in-out 0s;
+        }
+        &ActiveGreen{
+            border: 1px solid #00FF00;
+            box-shadow: 0px 0px 6px rgba(0, 255, 0, 0.93);
+            animation: startGlowBorderGreen 0.8s ease-in-out 0s;
+        } 
+        &ActiveBlue{
+            border: 1px solid #0000FF;
+            box-shadow: 0px 0px 6px rgba(0, 0, 255, 0.93);
+            animation: startGlowBorderBlue 0.8s ease-in-out 0s;
+        }
+        &__glowRed{
+            @include glow($red);
+            animation: startGlowFillRed 0.9s ease-in-out 0s;
+        }
+        &__glowGreen{
+            @include glow($green);
+            animation: startGlowFillGreen 0.9s ease-in-out 0s;
+        }
+        &__glowBlue{
+            @include glow($blu9);
+            animation: startGlowFillBlue 0.9s ease-in-out 0s;
+        }
+        &__dim{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        background-color:   #999999;
+        border-radius: 15%;
+        }
+    }
+}
+
+@keyframes startGlowBorderGreen {
+    0%{
+    border: 1px solid #999999;
+    box-shadow: 0px 0px 6px #999999;
+    }
+    100%{
+    border: 1px solid $green;
+    box-shadow: 0px 0px 6px $green93;
+    }
+}
+@keyframes startGlowBorderRed {
+    0%{
+    border: 1px solid #999999;
+    box-shadow: 0px 0px 6px #999999;
+    }
+    100%{
+    border: 1px solid $red;
+    box-shadow: 0px 0px 6px $red93;
+    }
+}
+
+@keyframes startGlowBorderBlue {
+    0%{
+    border: 1px solid #999999;
+    box-shadow: 0px 0px 6px #999999;
+    }
+    100%{
+    border: 1px solid $blue;
+    box-shadow: 0px 0px 6px $blue93;
+    }
+}
+
+
+@keyframes startGlowFillRed {
+    0%{
+    background-color:   #999999;
+    }
+    100%{
+    background-color:  $red;
+    }
+}
+@keyframes startGlowFillGreen {
+    0%{
+    background-color:   #999999;
+    }
+    100%{
+    background-color:  $green;
+    }
+}
+@keyframes startGlowFillBlue {
+    0%{
+    background-color:   #999999;
+    }
+    100%{
+    background-color:  $blue;
+    }
+}
