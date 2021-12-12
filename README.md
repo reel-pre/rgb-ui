@@ -15,9 +15,9 @@ import { RGBbutton, RGBslider, RGBchip, RGBcheckbox } from 'rgb-ui'
 import 'rgb-ui/dist/index.css'
 ```
 
-## Components
+# *Components(API and usage):*
 
-### 1. RGBslider
+## 1. RGBslider
 
 A rgb-ui variant of a input range slider.
 
@@ -26,7 +26,7 @@ A rgb-ui variant of a input range slider.
 min(number), max(number), step(number), value(number), onChange(function), type(string = 'red'||'green'||'blue'), className(string).  
 All three variants of the RGBslider(red, green or blue) can be accessed through the type prop.
 
-### 2. RGBchip
+## 2. RGBchip
 
 A rgb-ui variant of a chip to display data.
 
@@ -56,7 +56,7 @@ return <div className='rangecontainer'>
         <RGBchip label={input} type='red' />
       </div>;
 ```
-### 3. RGBcheckbox
+## 3. RGBcheckbox
 A rgb-ui variant of a checkbox input.
 
 
@@ -83,7 +83,37 @@ return <RGBcheckbox
       />;
 ```
 
-### 4. RGBbutton
+## 4. RGBskeleton
+A rgb-ui variant of loading skeleton.
+
+
+<b>Prop-name(type)</b>:
+
+width(string = CSS property of width in px,%,vw,vh  etc. Ex. 10px), height(string = CSS property of height in px,%,vw,vh  etc. Ex. 15%), type(string = 'red'||'green'||'blue'),
+className(string) .  
+All three variants of the RGBskeleton(red, green or blue) can be accessed through the type prop.   
+
+Example usage:  
+1. Green variant:  
+![rgb-ui_checkbox](./images/skeleton_gif_animation__green.gif)  
+
+
+2. Red,Green and Blue variant together:  
+![rgb-ui_checkbox](./images/skeleton_gif_animation.gif)  
+
+
+Example code:
+```jsx
+      <div className='skeltonHolder'>
+        <RGBskeleton height='30px' width='30px' type='red' />
+        <RGBskeleton height='45px' width='100%' type='red' />
+        <RGBskeleton height='15px' width='100%' type='red' />
+        <RGBskeleton height='5px' width='100%' type='red' />
+        <RGBskeleton height='5px' width='100%' type='red' />
+      </div>
+```
+
+## 5. RGBbutton
 
 <b>Prop-name(type)</b>:
 
