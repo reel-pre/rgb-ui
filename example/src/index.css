@@ -9,7 +9,11 @@ body {
   font-family: 'Passion One', cursive;
 
 }
-
+.skeltonHolder{
+  display: inline-block;
+margin: 30px 20px;
+width: 200px;
+}
 button{
   font-family: 'Passion One', cursive;
 }

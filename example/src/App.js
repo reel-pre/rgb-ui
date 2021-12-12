@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { RGBbutton, RGBslider, RGBchip, RGBcheckbox } from 'rgb-ui'
+import { RGBbutton, RGBslider, RGBchip, RGBcheckbox, RGBskeleton } from 'rgb-ui'
 import 'rgb-ui/dist/index.css'
 
 const App = () => {
@@ -20,6 +20,8 @@ const App = () => {
   }
   return (
     <>
+      <RGBbutton label='RGB-UI' type='scratch' className='customClass' />
+
       <div className='rangecontainer'>
         <RGBslider
           type='red'
@@ -53,9 +55,30 @@ const App = () => {
         />
         <RGBchip label={input3} type='blue' />
       </div>
-      <RGBbutton label='RGB-UI' type='scratch' className='customClass' />
+      <div className='skeltonHolder'>
+        <RGBskeleton height='30px' width='30px' type='red' />
+        <RGBskeleton height='45px' width='100%' type='red' />
+        <RGBskeleton height='15px' width='100%' type='red' />
+        <RGBskeleton height='5px' width='100%' type='red' />
+        <RGBskeleton height='5px' width='100%' type='red' />
+      </div>
 
-      <p className='classifier'>{"<RGBbutton label='Click Me'/>"}</p>
+      <div className='skeltonHolder'>
+        <RGBskeleton height='30px' width='30px' type='green' />
+        <RGBskeleton height='45px' width='100%' type='green' />
+        <RGBskeleton height='15px' width='100%' type='green' />
+        <RGBskeleton height='5px' width='100%' type='green' />
+        <RGBskeleton height='5px' width='100%' type='green' />
+      </div>
+
+      <div className='skeltonHolder'>
+        <RGBskeleton height='30px' width='30px' type='blue' />
+        <RGBskeleton height='45px' width='100%' type='blue' />
+        <RGBskeleton height='15px' width='100%' type='blue' />
+        <RGBskeleton height='5px' width='100%' type='blue' />
+        <RGBskeleton height='5px' width='100%' type='blue' />
+      </div>
+
       <br />
       <RGBcheckbox
         label='red checkbox'
@@ -85,6 +108,7 @@ const App = () => {
       />
       <br />
       <br />
+      <p className='classifier'>{"<RGBbutton label='Click Me'/>"}</p>
       <RGBbutton label='Click Me' />
       <p className='classifier'>
         {"<RGBbutton label='Click Me' type='scratch'/>"}

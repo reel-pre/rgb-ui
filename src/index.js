@@ -4,4 +4,5 @@ import RGBbutton from './Button'
 import RGBslider from './Slider'
 import RGBchip from './Chip'
 import RGBcheckbox from './Checkbox'
-export { RGBbutton, RGBslider, RGBchip, RGBcheckbox }
+import RGBskeleton from './Skeleton'
+export { RGBbutton, RGBslider, RGBchip, RGBcheckbox, RGBskeleton }
