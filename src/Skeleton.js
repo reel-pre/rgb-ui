@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './skeleton.module.scss'
 
-const RGBskeleton = ({ type, width, height }) => {
+const RGBskeleton = ({ type, width, height, className }) => {
   return (
     <div
       style={{ width: width, height: height }}
@@ -11,7 +11,7 @@ const RGBskeleton = ({ type, width, height }) => {
           : type === 'green'
           ? styles.RGBskeletonBase__green
           : styles.RGBskeletonBase__blue
-      }`}
+      } ${className}`}
     ></div>
   )
 }
