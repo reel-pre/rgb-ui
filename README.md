@@ -11,9 +11,11 @@ npm install --save rgb-ui
 ## Import
 Components can be imported from rgb-ui using named import. You also need to import the css file for rgb-ui.
 ```jsx
-import { RGBbutton, RGBslider, RGBchip, RGBcheckbox } from 'rgb-ui'
+import { RGBbutton, RGBslider, RGBchip, RGBcheckbox, RGBskeleton } from 'rgb-ui'
 import 'rgb-ui/dist/index.css'
-```
+```  
+## Complete usage code:  
+https://github.com/reel-pre/rgb-ui/blob/main/example/src/App.js
 
 # *Components(API and usage):*
 
