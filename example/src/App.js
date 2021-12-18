@@ -1,11 +1,22 @@
 import React, { useState } from 'react'
-import { RGBbutton, RGBslider, RGBchip, RGBcheckbox, RGBskeleton } from 'rgb-ui'
+import {
+  RGBbutton,
+  RGBslider,
+  RGBchip,
+  RGBcheckbox,
+  RGBskeleton,
+  RGBinput
+} from 'rgb-ui'
 import 'rgb-ui/dist/index.css'
 
 const App = () => {
   const [input, setInput] = useState(40)
   const [input2, setInput2] = useState(40)
   const [input3, setInput3] = useState(40)
+  const [inputText, setInputText] = useState('')
+  const [inputText2, setInputText2] = useState('')
+  const [inputText3, setInputText3] = useState('')
+
   const [checkbox, setCheckbox] = useState(false)
   const [checkbox2, setCheckbox2] = useState(false)
   const [checkbox3, setCheckbox3] = useState(false)
@@ -21,7 +32,6 @@ const App = () => {
   return (
     <>
       <RGBbutton label='RGB-UI' type='scratch' className='customClass' />
-
       <div className='rangecontainer'>
         <RGBslider
           type='red'
@@ -62,7 +72,6 @@ const App = () => {
         <RGBskeleton height='5px' width='100%' type='red' />
         <RGBskeleton height='5px' width='100%' type='red' />
       </div>
-
       <div className='skeltonHolder'>
         <RGBskeleton height='30px' width='30px' type='green' />
         <RGBskeleton height='45px' width='100%' type='green' />
@@ -70,7 +79,6 @@ const App = () => {
         <RGBskeleton height='5px' width='100%' type='green' />
         <RGBskeleton height='5px' width='100%' type='green' />
       </div>
-
       <div className='skeltonHolder'>
         <RGBskeleton height='30px' width='30px' type='blue' />
         <RGBskeleton height='45px' width='100%' type='blue' />
@@ -78,7 +86,6 @@ const App = () => {
         <RGBskeleton height='5px' width='100%' type='blue' />
         <RGBskeleton height='5px' width='100%' type='blue' />
       </div>
-
       <br />
       <RGBcheckbox
         label='red checkbox'
@@ -107,7 +114,38 @@ const App = () => {
         }}
       />
       <br />
+      TEXT INPUT:
       <br />
+      <RGBinput
+        className=''
+        type='red'
+        value={inputText}
+        onChange={(e) => {
+          setInputText(e.target.value)
+        }}
+      />
+      <br />
+      TEXT INPUT:
+      <br />
+      <RGBinput
+        className=''
+        type='green'
+        value={inputText2}
+        onChange={(e) => {
+          setInputText2(e.target.value)
+        }}
+      />
+      <br />
+      TEXT INPUT:
+      <br />
+      <RGBinput
+        className=''
+        type='blue'
+        value={inputText3}
+        onChange={(e) => {
+          setInputText3(e.target.value)
+        }}
+      />
       <p className='classifier'>{"<RGBbutton label='Click Me'/>"}</p>
       <RGBbutton label='Click Me' />
       <p className='classifier'>

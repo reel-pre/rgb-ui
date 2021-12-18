@@ -5,4 +5,6 @@ import RGBslider from './Slider'
 import RGBchip from './Chip'
 import RGBcheckbox from './Checkbox'
 import RGBskeleton from './Skeleton'
-export { RGBbutton, RGBslider, RGBchip, RGBcheckbox, RGBskeleton }
+import RGBinput from './Input'
+import './index.css'
+export { RGBbutton, RGBslider, RGBchip, RGBcheckbox, RGBskeleton, RGBinput }
