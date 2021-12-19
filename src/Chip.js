@@ -5,7 +5,7 @@ const RGBchip = ({ type, label, onClick, className }) => {
   return (
     <div
       onClick={onClick}
-      className={`${styles.RGBchip} ${className} ${
+      className={`min-w-chip ${styles.RGBchip} ${className} ${
         type === 'red'
           ? styles['RGBchip--red']
           : type === 'blue'

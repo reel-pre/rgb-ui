@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import {
-  RGBbutton,
+  RGBGlowButton,
   RGBslider,
   RGBchip,
   RGBcheckbox,
   RGBskeleton,
-  RGBinput
+  RGBinput,
+  RGBbutton
 } from 'rgb-ui'
 import 'rgb-ui/dist/index.css'
 
@@ -31,7 +32,7 @@ const App = () => {
   }
   return (
     <>
-      <RGBbutton label='RGB-UI' type='scratch' className='customClass' />
+      <RGBGlowButton label='RGB-UI' type='scratch' className='customClass' />
       <div className='rangecontainer'>
         <RGBslider
           type='red'
@@ -146,16 +147,20 @@ const App = () => {
           setInputText3(e.target.value)
         }}
       />
-      <p className='classifier'>{"<RGBbutton label='Click Me'/>"}</p>
-      <RGBbutton label='Click Me' />
+      <br />
+      <RGBbutton type='red' label='Subscribe' />
+      <RGBbutton type='green' label='Subscribe' />
+      <RGBbutton type='blue' label='Subscribe' />
+      <p className='classifier'>{"<RGBGlowButton label='Click Me'/>"}</p>
+      <RGBGlowButton label='Click Me' />
       <p className='classifier'>
-        {"<RGBbutton label='Click Me' type='scratch'/>"}
+        {"<RGBGlowButton label='Click Me' type='scratch'/>"}
       </p>
-      <RGBbutton label='Click Me' type='scratch' />
+      <RGBGlowButton label='Click Me' type='scratch' />
       <p className='classifier'>
-        {"<RGBbutton label='Click Me' type='lines'/>"}
+        {"<RGBGlowButton label='Click Me' type='lines'/>"}
       </p>
-      <RGBbutton label='Click Me' type='lines' />
+      <RGBGlowButton label='Click Me' type='lines' />
     </>
   )
 }

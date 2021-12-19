@@ -1,8 +1,20 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  // purge: {
+  //   enabled: true,
+  //   content: ['./src/**/*.{js,jsx,ts,tsx}']
+  // },
+  variants: {
+    extend: {
+      borderWidth: ['hover', 'focus']
+    }
+  },
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    minWidth: {
+      chip: '45px'
+    },
     colors: {
       pureRed: '#FF0000',
       pureGreen: '#00FF00',
