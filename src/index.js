@@ -7,6 +7,7 @@ import RGBchip from './Chip'
 import RGBcheckbox from './Checkbox'
 import RGBskeleton from './Skeleton'
 import RGBinput from './Input'
+import RGBalert from './Alert'
 import './index.css'
 export {
   RGBGlowButton,
@@ -15,5 +16,6 @@ export {
   RGBcheckbox,
   RGBskeleton,
   RGBinput,
-  RGBbutton
+  RGBbutton,
+  RGBalert
 }

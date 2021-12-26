@@ -1,10 +1,10 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  // purge: {
-  //   enabled: true,
-  //   content: ['./src/**/*.{js,jsx,ts,tsx}']
-  // },
+  purge: {
+    enabled: true,
+    content: ['./src/**/*.{js,jsx,ts,tsx}']
+  },
   variants: {
     extend: {
       borderWidth: ['hover', 'focus']
@@ -21,14 +21,21 @@ module.exports = {
       pureBlue: '#0000FF',
       black: colors.black,
       gray: colors.gray,
-      white: colors.white
+      white: colors.white,
+      darkRed: '#8C0000',
+      darkGreen: '#008C00',
+      darkBlue: '#00008C'
     },
     boxShadow: {
       redShadow: '0px 0px 8px rgba(255, 0, 0, 0.93)',
       greenShadow: '0px 0px 8px rgba(0, 255, 0, 0.93)',
       blueShadow: '0px 0px 8px rgba(0, 0, 255, 0.93)'
     },
-    extend: {}
+    extend: {
+      animation: {
+        'bounce-slow': 'pulse 1.2s linear'
+      }
+    }
   },
   plugins: []
 }
