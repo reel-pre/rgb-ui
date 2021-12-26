@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Passion+One&display=swap');
+*{
+  font-family: 'Passion One', cursive;
+}
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +11,22 @@ body {
   padding: 20px;
   font-family: 'Passion One', cursive;
 
+}
+.alertdiv{
+  margin: 100px 0;
+  margin-bottom: 150px;
+}
+.buttondiv{
+  margin: 40px 0;
+}
+.checkboxdiv{
+  margin: 40px 0;
+}
+.skeletondiv{
+  margin: 20px 0;
+}
+.rangediv{
+  margin: 30px 0;
 }
 .skeltonHolder{
   display: inline-block;
