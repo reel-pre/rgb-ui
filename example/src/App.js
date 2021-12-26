@@ -221,16 +221,6 @@ const App = () => {
         />
         <br />
       </div>
-      <p className='classifier'>{"<RGBGlowButton label='Click Me'/>"}</p>
-      <RGBGlowButton label='Click Me' />
-      <p className='classifier'>
-        {"<RGBGlowButton label='Click Me' type='scratch'/>"}
-      </p>
-      <RGBGlowButton label='Click Me' type='scratch' />
-      <p className='classifier'>
-        {"<RGBGlowButton label='Click Me' type='lines'/>"}
-      </p>
-      <RGBGlowButton label='Click Me' type='lines' />
     </>
   )
 }
