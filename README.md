@@ -19,7 +19,79 @@ https://github.com/reel-pre/rgb-ui/blob/main/example/src/App.js
 
 # *Components(API and usage):*
 
-## 1. RGBslider
+## 1. RGBbutton
+A rgb-ui variant of a button.
+
+
+<b>Prop-name(type)</b>:
+
+label(number or string), type(string = 'red'||'green'||'blue'), onClick(function), className(string).  
+All three variants of the RGBbutton(red, green or blue) can be accessed through the type prop.   
+
+
+Example usage:  
+![rgb-ui_button](./images/button_gif_animation.gif)
+
+
+Example code:
+```jsx
+<RGBbutton
+type='blue'
+label='Subscribe'
+onClick={() => {}}
+/>
+```
+
+## 2. RGBinput
+A rgb-ui variant of a text input.
+
+
+<b>Prop-name(type)</b>:
+
+value(string), type(string = 'red'||'green'||'blue'), onChange(function), className(string).  
+All three variants of the RGBinput(red, green or blue) can be accessed through the type prop.   
+
+
+Example usage:  
+![rgb-ui_input](./images/text_input_gif_animation.gif)
+
+
+Example code:
+```jsx
+<RGBinput
+className=''
+type='blue'
+value={inputText}
+onChange={(e) => {
+setInputText(e.target.value)
+}}
+/>
+```
+
+## 3. RGBalert
+A rgb-ui variant of alert component.
+
+
+<b>Prop-name(type)</b>:
+
+label(string), type(string = 'red'||'green'||'blue').  
+All three variants of the RGBalert(red, green or blue) can be accessed through the type prop.   
+red=error | green=success | blue=info
+
+Example usage:  
+![rgb-ui_input](./images/alert_gif_animation.gif)
+
+
+Example code:
+```jsx
+<RGBalert
+type='red'
+label='An error occured and we are working on it to see what went wrong !'
+/>
+```
+
+
+## 4. RGBslider
 
 A rgb-ui variant of a input range slider.
 
@@ -28,7 +100,7 @@ A rgb-ui variant of a input range slider.
 min(number), max(number), step(number), value(number), onChange(function), type(string = 'red'||'green'||'blue'), className(string).  
 All three variants of the RGBslider(red, green or blue) can be accessed through the type prop.
 
-## 2. RGBchip
+## 5. RGBchip
 
 A rgb-ui variant of a chip to display data.
 
@@ -58,7 +130,7 @@ return <div className='rangecontainer'>
         <RGBchip label={input} type='red' />
       </div>;
 ```
-## 3. RGBcheckbox
+## 6. RGBcheckbox
 A rgb-ui variant of a checkbox input.
 
 
@@ -85,7 +157,7 @@ return <RGBcheckbox
       />;
 ```
 
-## 4. RGBskeleton
+## 7. RGBskeleton
 A rgb-ui variant of loading skeleton.
 
 
@@ -115,14 +187,6 @@ Example code:
       </div>
 ```
 
-## 5. RGBbutton
-
-<b>Prop-name(type)</b>:
-
-label(string | number), type(string = 'scratch'||'lines'||undefined), className(string).
-
-Example usage:  
-![rgb-ui demo example](./images/example.gif)
 
 You can include your own css classnames to override the styles.  
 For example, you can override the button styles by passing the classname to any component:
