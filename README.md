@@ -17,7 +17,7 @@ import 'rgb-ui/dist/index.css'
 ## Complete usage code:  
 https://github.com/reel-pre/rgb-ui/blob/main/example/src/App.js
 
-# *Components(API and usage):*
+# Components(API and Example usage):
 
 ## 1. RGBbutton
 A rgb-ui variant of a button.
